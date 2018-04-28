@@ -1,0 +1,4 @@
+worker-id: b4134c52-d97c-4b53-b67b-3131cd3c2fc8
+logs.users: []
+logs.groups: []
+topology.submitter.user: puc
