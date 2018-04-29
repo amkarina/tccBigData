@@ -15,6 +15,12 @@ public class Pratica3Main {
 
         //Configuration
         Config conf = new Config();
+        conf.put(Config.TOPOLOGY_MAX_SPOUT_PENDING, 2048);
+        conf.put(Config.TOPOLOGY_BACKPRESSURE_ENABLE, false);
+        conf.put(Config.TOPOLOGY_EXECUTOR_RECEIVE_BUFFER_SIZE, 16384);
+        conf.put(Config.TOPOLOGY_EXECUTOR_SEND_BUFFER_SIZE, 16384);
+        conf.put(Config.STORM_ZOOKEEPER_PORT, 2185);
+
         conf.setDebug(true);
 
         LocalCluster cluster = new LocalCluster();

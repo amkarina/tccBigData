@@ -41,7 +41,7 @@ public class MongoBolt extends BaseBasicBolt {
 
             //System.out.println(cur.toJson());
             JSONObject recomendacoes = new JSONObject(cur.toJson());
-            String recomendacao = recomendacoes.getString("recommendations");
+            String recomendacao = recomendacoes.get("movieId").toString();
             System.out.println("Recomendacoes: " + recomendacao);
             collector.emit(new Values(userid, recomendacao));
         }
